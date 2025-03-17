@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaHome, FaStore, FaBullhorn } from "react-icons/fa";
+import { FaHome, FaBullhorn } from "react-icons/fa";
 import { PiBuildingApartmentFill } from "react-icons/pi";
 
 import "../styles/navbar.css";
@@ -11,23 +11,18 @@ function Navbar() {
       <div className="navbar-left">
         <Link to="/" className="logo">
           <PiBuildingApartmentFill style={{color :'#5d6244', fontSize:'30px'}} />
-          <span className="logo-text">MP Inmobiliaria</span>
+          <span className="logo-text">JCK</span>
         </Link>
       </div>
       
       <ul className="navbar-menu">
         <li>
-          <Link to="/inmobiliaria_frontend">
+          <Link to="/">
             <FaHome /> Home
           </Link>
         </li>
         <li className="dropdown">
-          <Link to="/inmobiliaria_frontend/marketplace">
-            <FaStore /> Marketplace
-          </Link>
-        </li>
-        <li className="dropdown">
-          <Link to="/inmobiliaria_frontend/marketing">
+          <Link to="/marketing">
             <FaBullhorn /> Marketing
           </Link>
         </li>
