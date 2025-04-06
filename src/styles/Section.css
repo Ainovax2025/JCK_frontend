@@ -20,10 +20,12 @@
 }
 
 .stat-icon {
-  transform: translate(-8vh, 0.5vh);
+  /* transform: translate(-8vh, 0.5vh); */
   font-size: 2.5rem;
   color: white;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
+
+
 }
 
 .full-section {
@@ -51,7 +53,7 @@
   justify-content: center;
   width: 100%;
   max-width: 100%;
-  background-color: rgba(5, 22, 92, 0.903); /* Azul marino oscuro */
+  background-color: #222c55; /* Azul marino oscuro */
 }
 
 /* Tarjetas de estadísticas */
@@ -66,13 +68,18 @@
 
 .stat-card:hover {
   transform: scale(1.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Estilos de números y etiquetas */
 .stat-number {
-  font-size: 4.1rem;
+  font-size: 3.5rem;
   font-weight: bold;
-  color: #00d4ff; /* Celeste neón */
+  color: white; 
+  margin:0px;/* Celeste neón */
 }
 
 .stat-label {

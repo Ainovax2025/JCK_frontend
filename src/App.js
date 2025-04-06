@@ -3,19 +3,20 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/nav";
 import Home from "./pages/home/home";
 import Marketing from "./pages/marketing/Marketing.js";
-import InfoBottomPage from "./components/infoBottomPage.jsx";
+import Footer from "./components/footer.jsx";
+import "./styles/app.scss";
 
 function App() {
   return (
     <>
       <Navbar />
-      <div style={{ paddingBottom: "50px " }}>
+      <div className="containerAplicacion">
         <Routes>
           <Route path="/Universal_JCK" element={<Home />} />
           <Route path="/marketing" element={<Marketing />} />
         </Routes>
       </div>
-      <InfoBottomPage />
+      <Footer />
     </>
   );
 }

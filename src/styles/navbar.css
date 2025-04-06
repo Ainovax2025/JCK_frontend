@@ -2,7 +2,7 @@
 .navbar {
     display: flex;
     align-items: center;
-    background-color: #e0e6e6;
+    background-color: #222c55;
     padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     height: 50px;
@@ -27,7 +27,7 @@
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: bold;
-    color: #333;
+    color: white;
   }
   
   .logo-img {
@@ -41,6 +41,8 @@
     list-style: none;
     gap: 20px;
     padding: 0px;
+    position: absolute;
+    left: 50%;
   }
   
   .navbar-menu li {
@@ -49,7 +51,7 @@
   
   .navbar-menu a {
     text-decoration: none;
-    color: #393c35;
+    color: white;
     font-size: 1rem;
     display: flex;
     align-items: center;
@@ -57,7 +59,7 @@
   }
   
   .navbar-menu a:hover {
-    color: #5d6244;
+    color: ;
   }
   
   .dropdown-icon {
@@ -85,8 +87,8 @@
   .user-menu button{
     padding: 9px 26px;
     border-radius: 7px;
-    border: 2px solid #5d6244;
-    background: #5d6244;
+    border: 2px solid #222c55;
+    background: #222c55;
     color: white;
   }
   .user-avatar {

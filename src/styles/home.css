@@ -1,5 +1,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
+
+.ContainerSectionBienvenida{
+    background: #E5E5E5;
+    padding: 4vw;
+}
+.SectionBienvenida{
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 10px;
+}
+.ContenedorBienvenidaIzquierda, .ContenedorBienvenidaDerecha{
+    width: 50%;
+}
+
+.ContenedorBienvenidaDerecha{
+    background-color: #6c6c64;
+    height: 100%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    width: 40%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.ContainerTextBienvenida{
+    padding: 45px 106px;
+    color: #222c55;
+}
+
+.ContainerTextBienvenida h1{
+    font-size: 3vw;
+    margin: 0px;
+    margin-bottom: 39px;
+}
+.ContainerTextBienvenida h4{
+    font-size: 1.2vw;
+    margin: 0px;
+}
+
+.ContainerBtns{
+    padding: 0px 106px;
+    display: flex;
+    gap:20px;
+}
+
+.ContainerBtns button:nth-child(1) {
+    background: #222c55;
+    color: white;
+    padding: 19px;
+    border: none;
+    border-radius: 7px;
+  }
+  
+  .ContainerBtns button:nth-child(2) {
+    background: white;
+    color: #222c55;
+    padding: 19px;
+    border: none;
+    border-radius: 7px;
+  }
 .bg-home {
     margin-top: 0px; /* Ajusta según la altura de tu navbar */
     padding: 20px;
@@ -29,7 +95,6 @@
     color: rgb(33, 30, 30); /* Texto en blanco */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
     transform: translate(0px, 20px); /* Mueve el cuadro */
-    max-width: 220vh; /* Ancho máximo */
 }
 
 .grid-container {
@@ -41,10 +106,10 @@
 }
 
 .image-div{
-    width: 50ch; /* Ajusta el tamaño de la imagen */
-    height: auto;
-    border-radius: 10px; /* Bordes redondeados opcional */
-    transform: translate(0vh, 4vh);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
 }
 
 .text-content {

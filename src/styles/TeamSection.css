@@ -1,43 +1,51 @@
+.team-section{
+    background-color: #E5E5E5;
+    padding-top: 40px;
+}
 .team-container {
     text-align: center;
     padding: 40px 20px;
-    background-color: #f8f8f8;
+    background-color: transparent;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .team-title {
     font-size: 2rem;
     margin-bottom: 30px;
+    text-align: center;
+    color: #222c55;
+    font-weight: 800;
+    margin:0px;
 }
 
 .team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    width: 55%;
-    margin: 0 auto;
-    padding: 20px;
-    justify-content: center;
+    display: flex;
 }
 
 .team-card {
     text-align: center;
     position: relative;
+    width: 24vw;
 }
 
 .image-container {
     position: relative;
-    width: 80%;
+    width: 50%;
     overflow: hidden;
-    border-radius: 150px; /*borde de cada foto*/
+    border-radius: 50%; /*borde de cada foto*/
     border-color: #f8f8f8;
     margin: 0 auto;
 }
 
-.team-image {
+.ContainerCardConductores{
+    display: flex;
     width: 100%;
-    border-radius: 10px;
+}
+
+.team-image {
+    width: 70%;
+    border-radius: 50%;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -79,15 +87,18 @@
 }
 
 .team-name {
-    margin-top: 10px;
     font-size: 1.2rem;
     font-weight: bold;
+    color: #4d5061 ;
+    margin: 0px;
+    margin-top: 35px;
 }
 
 .team-cargo {
     font-size: 1.2rem;
     font-weight: bold;
-    color: rgb(40, 40, 172);
+    color: #222c55;
+    margin: 0px;
 }
 
 @media (max-width: 768px) {
