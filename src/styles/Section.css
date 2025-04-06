@@ -1,3 +1,31 @@
+.section-title {
+  margin-top: 0px; /* Ajusta según la altura de la sección */
+  padding-top: 30px ;
+  text-align: center;
+  font-size: 2.6rem;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(5, 22, 92, 0.903); /* Azul marino oscuro */
+  margin-bottom: 0px;
+}
+
+.section-space {
+  margin-top: 0px; /* Ajusta según la altura de la sección */
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgba(5, 22, 92, 0.903);
+  background-color: rgba(5, 22, 92, 0.903); /* Azul marino oscuro */
+  margin-bottom: 0px;
+}
+
+.stat-icon {
+  transform: translate(-8vh, 0.5vh);
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
 .full-section {
     width: 100%;  /* Ocupa todo el ancho de la pantalla */
     height: 100vh; /* Ocupa todo el alto de la pantalla */
@@ -28,24 +56,21 @@
 
 /* Tarjetas de estadísticas */
 .stat-card {
-  /* background: rgba(5, 22, 92, 0.903); */
   border-radius: 12px;
-  padding: 30px;
-  width: 220px;
+  padding: 10vh;
+  width: 280px;
   text-align: center;
   backdrop-filter: blur(10px);
   transition: transform 0.3s ease-in-out;
 }
-#Divoasdasda{
-  width: 100%;
-}
+
 .stat-card:hover {
   transform: scale(1.05);
 }
 
 /* Estilos de números y etiquetas */
 .stat-number {
-  font-size: 3rem;
+  font-size: 4.1rem;
   font-weight: bold;
   color: #00d4ff; /* Celeste neón */
 }
