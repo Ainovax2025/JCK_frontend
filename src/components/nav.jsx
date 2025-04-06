@@ -17,8 +17,33 @@ function Navbar() {
       
       <ul className="navbar-menu">
         <li>
-          <Link to="/">
-            <FaHome /> Home
+          <Link to="/Universal_JCK">
+            <FaHome /> Inicio
+          </Link>
+        </li>
+        <li className="dropdown">
+          <Link to="/Universal_JCK">
+            <FaBullhorn /> Enseñanza moto y carro
+          </Link>
+        </li>
+        <li className="dropdown">
+          <Link to="/Universal_JCK">
+            <FaBullhorn /> Enseñanza Especializada
+          </Link>
+        </li>
+        <li className="dropdown">
+          <Link to="/Universal_JCK">
+            <FaBullhorn /> Otros Servicio
+          </Link>
+        </li>
+        <li className="dropdown">
+          <Link to="/Universal_JCK">
+            <FaBullhorn /> Quienes Somos
+          </Link>
+        </li>
+        <li className="dropdown">
+          <Link to="/Universal_JCK">
+            <FaBullhorn /> Contacto
           </Link>
         </li>
         <li className="dropdown">

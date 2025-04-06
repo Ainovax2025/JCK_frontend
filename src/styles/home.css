@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+.bg-home {
+    margin-top: 0px; /* Ajusta según la altura de tu navbar */
+    padding: 20px;
+    background-image: url("../assets/wallpapers/casa1.webp"); /* O "../assets/background.jpg" si está en src */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.Titles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.transparent-box {
+    position:relative; /* O prueba con fixed */
+    top: 0px; /* Baja el cuadro */
+    left: 30%; /* Lo mueve a la derecha */
+    transform: none; /* Elimina transform si causa problemas */
+    gap: 20px; /* Espacio entre la imagen y el texto */
+    align-items: center;
+    background-color: rgba(155, 163, 173, 0.5); /* Color gris oscuro con 50% de transparencia */
+    border-radius: 12px; /* Bordes redondeados */
+    padding: 16px; /* Espaciado interno */
+    color: rgb(33, 30, 30); /* Texto en blanco */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transform: translate(100px, 20px); /* Mueve el cuadro */
+    max-width: 500px; /* Ancho máximo */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto 1fr; /* Imagen y textos en columnas */
+    gap: 20px;
+    align-items: center;
+}
+
+.image-div{
+    width: 150px; /* Ajusta el tamaño de la imagen */
+    height: auto;
+    border-radius: 10px; /* Bordes redondeados opcional */
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column; /* Apila los <p> verticalmente */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    /* background-color: #111827; */
+    /* color: white; */
+    margin: 0;
+    padding: 0;
+    }
+    
+.hero {
+        text-align: center;
+        padding: 4rem 2rem;
+    }
+    
+.hero h1 {
+        font-size: 2.5rem;
+        color: #3b82f6;
+    }
+    
+.hero p {
+        margin-top: 1rem;
+        color: #9ca3af;
+        font-size: 1.2rem;
+    }
+    
+.courses {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+        padding: 2rem;
+    }
+    
+.course-card {
+        background-color: #1f2937;
+        padding: 1.5rem;
+        border-radius: 12px;
+        border: 1px solid #374151;
+        text-align: center;
+    }
+    
+.course-card h3 {
+        color: #3b82f6;
+        font-size: 1.25rem;
+    }
+    
+.course-card p {
+        color: #9ca3af;
+        margin-top: 0.5rem;
+    }
+
+
+.whatsapp-btn {
+        width: 50px; /* 16rem equivalente a 64px, ajusta según necesites */
+        height: 50px;
+        border-radius: 50%;
+        background-image: url('/public/whatsapp-icon.png'); /* Asegúrate de que la imagen esté en public/ */
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+    }
+    
+.whatsapp-btn:hover {
+        transform: scale(1.1);
+    }
+
+.instagram-btn {
+        width: 50px; /* 16rem equivalente a 64px, ajusta según necesites */
+        height: 50px;
+        border-radius: 50%;
+        background-image: url('/public/instagram-icon.png'); /* Asegúrate de que la imagen esté en public/ */
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+    }
+    
+.instagram-btn:hover {
+        transform: scale(1.1);
+    }
+
+.facebook-btn {
+        width: 50px; /* 16rem equivalente a 64px, ajusta según necesites */
+        height: 50px;
+        border-radius: 50%;
+        background-image: url('/public/facebook-icon.png'); /* Asegúrate de que la imagen esté en public/ */
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+    }
+    
+.facebook-btn:hover {
+        transform: scale(1.1);
+    }

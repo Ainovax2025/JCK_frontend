@@ -11,7 +11,7 @@ function App() {
       <Navbar />
       <div style={{ paddingBottom: "50px " }}>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/Universal_JCK" element={<Home />} />
           <Route path="/marketing" element={<Marketing />} />
         </Routes>
       </div>

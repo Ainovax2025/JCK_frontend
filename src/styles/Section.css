@@ -1,0 +1,57 @@
+.full-section {
+    width: 100%;  /* Ocupa todo el ancho de la pantalla */
+    height: 100vh; /* Ocupa todo el alto de la pantalla */
+    display: flex; /* Centra el contenido */
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(5, 22, 92, 0.903); /* Azul marino oscuro */
+    color: white; /* Color del texto */
+    text-align: center;
+  }
+
+  .Titles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor centrado con flexbox */
+.stats-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  background-color: rgba(5, 22, 92, 0.903); /* Azul marino oscuro */
+}
+
+/* Tarjetas de estadísticas */
+.stat-card {
+  /* background: rgba(5, 22, 92, 0.903); */
+  border-radius: 12px;
+  padding: 30px;
+  width: 220px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease-in-out;
+}
+#Divoasdasda{
+  width: 100%;
+}
+.stat-card:hover {
+  transform: scale(1.05);
+}
+
+/* Estilos de números y etiquetas */
+.stat-number {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #00d4ff; /* Celeste neón */
+}
+
+.stat-label {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #ccd6f6; /* Gris claro */
+}

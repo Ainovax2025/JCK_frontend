@@ -1,12 +1,14 @@
+import React from "react";
+import HomeStart from "../../components/HomeStart";
+import Section from "../../components/Section";
+import ImageSlider from "../../components/ImageSlider";
 
-function Home() {
-
-    return(
-        <>
-            <div>hola</div>
-        </>
+export default function Home() {
+    return (
+        <div className="HomeStart">
+            <ImageSlider/>
+            <HomeStart />
+            <Section />
+        </div>
     );
-};
-
-export default Home;
-
+}
