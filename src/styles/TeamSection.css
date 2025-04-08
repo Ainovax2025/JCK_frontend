@@ -1,108 +1,132 @@
-.team-section{
+.team-section {
     background-color: #E5E5E5;
     padding-top: 40px;
-}
-.team-container {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: transparent;
-    overflow-x: auto;
-    overflow-y: hidden;
-}
-
-.team-title {
+  }
+  
+  .team-title {
     font-size: 2rem;
-    margin-bottom: 30px;
+    margin: 0;
     text-align: center;
     color: #222c55;
     font-weight: 800;
-    margin:0px;
-}
-
-.team-grid {
+  }
+  
+  .carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 40px 20px;
+  }
+  
+  .carousel-track {
     display: flex;
-}
-
-.team-card {
+    width: 20%;
+    transition: transform 0.7s ease-in-out;
+  }
+  
+  .team-card {
+    flex: 0 0 25%; /* 4 cards visibles */
+    padding: 0px;
+    box-sizing: border-box;
     text-align: center;
     position: relative;
-    width: 24vw;
-}
-
-.image-container {
+  }
+  
+  .image-container {
     position: relative;
-    width: 50%;
-    overflow: hidden;
-    border-radius: 50%; /*borde de cada foto*/
-    border-color: #f8f8f8;
+    width: 30%;
     margin: 0 auto;
-}
-
-.ContainerCardConductores{
-    display: flex;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+  
+  .team-image {
     width: 100%;
-}
-
-.team-image {
-    width: 70%;
     border-radius: 50%;
     transition: transform 0.3s ease-in-out;
-}
-
-.image-container:hover .team-image {
+  }
+  
+  .image-container:hover .team-image {
     transform: scale(1.05);
-}
-
-.overlay {
+  }
+  
+  .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: rgb(255, 255, 255);
+    background-color: rgba(34, 44, 85, 0.8); /* oscuro con tono azul */
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     opacity: 0;
+    border-radius: 50%;
     transition: opacity 0.3s ease-in-out;
-    border-radius: 10px;
-    padding: 10px;
-}
-
-.image-container:hover .overlay {
+    padding: 15px;
+  }
+  
+  .image-container:hover .overlay {
     opacity: 1;
-}
-
-.rating {
+  }
+  
+  .rating {
     font-size: 1.2rem;
     margin-bottom: 5px;
-}
-
-.description {
+  }
+  
+  .description {
     font-size: 0.9rem;
     text-align: center;
     max-width: 80%;
-}
-
-.team-name {
+  }
+  
+  .team-name {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #4d5061 ;
-    margin: 0px;
-    margin-top: 35px;
-}
-
-.team-cargo {
-    font-size: 1.2rem;
+    color: #4d5061;
+    margin: 0;
+    margin-top: 20px;
+  }
+  
+  .team-cargo {
+    font-size: 1.1rem;
     font-weight: bold;
     color: #222c55;
-    margin: 0px;
-}
+    margin: 5px 0 0 0;
+  }
+  
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    border: 2px solid #222c55;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dot.active {
+    background-color: #222c55;
+  }
+  
+  .reduced-width {
+    flex: 0 0 22%;
+    margin: 0px -6%;/* reduce el margen horizontal si las ves muy separadas */
+  }
 
-@media (max-width: 768px) {
-    .team-grid {
-        grid-template-columns: 1fr;
+  @media (max-width: 768px) {
+    .team-card {
+      flex: 0 0 100%;
     }
-}
+  }
+  
