@@ -3,11 +3,12 @@ import "../styles/HomeStart.css";
 import { motion } from "framer-motion";
 
 // Importa tus imágenes desde assets
-import Img1 from "../assets/Rotation/TeamWork.jpg";
-import Img2 from "../assets/Rotation/image1.png";
-import Img3 from "../assets/Rotation/image2.png";
+import Img1 from "../assets/Rotation/Logo.png";
+import Img2 from "../assets/Rotation/TeamWork.jpg";
+import Img3 from "../assets/Rotation/TeamWork1.jpg";
+import Img4 from "../assets/Rotation/Coche1.jpg";
 
-const images = [Img1, Img2, Img3];
+const images = [Img1, Img2, Img3, Img4];
 
 export default function Home() {
   const [currentImage, setCurrentImage] = useState(0);
