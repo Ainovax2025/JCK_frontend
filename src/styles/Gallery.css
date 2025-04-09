@@ -1,9 +1,9 @@
-.team-section {
+.vehicle-section {
     background-color: #E5E5E5;
     padding-top: 40px;
 }
 
-.team-title {
+.vehicle-title {
     font-size: 2vw;
     margin: 0;
     text-align: center;
@@ -11,57 +11,57 @@
     font-weight: 800;
 }
 
-.carousel-container {
+.carousel-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0px;
     padding: 15px 0;
     overflow: hidden;
 }
 
-.carousel-track {
+.carousel-inner {
     display: flex;
+    transition: transform 0.7s ease-in-out;
+    width: calc(33.3333% * 7); /* 7 es el número total de vehículos */
 }
 
-.carousel-dots-colaboradores {
+.vehicle-dots {
     display: flex;
     justify-content: center;
     gap: 10px;
-    padding: 2vh 0px;
+    padding: 2vh 0;
 }
 
-.dot.active-colaboradores {
+.vehicle-dot {
+    width: 12px;
+    height: 12px;
+    border: 2px solid #222c55;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.vehicle-dot.active {
     background-color: #222c55;
 }
 
-.team-card {
-    flex: 0 0 calc(100% / 3);
-    padding: 10px;
-    box-sizing: border-box;
-    text-align: center;
-    transition: transform 0.7s ease-in-out;
-}
-
-.image-container-car {
+.image-wrapper {
     position: relative;
-    /* clave para que el overlay se posicione respecto a este contenedor */
     overflow: hidden;
     width: 100%;
     margin: 0 auto;
-    /* centrar la imagen */
     aspect-ratio: 1 / 1;
 }
 
-.image-container-car .team-image {
+.vehicle-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 0;
     display: block;
 }
 
-.overlay-teamsection {
+.vehicle-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -78,30 +78,22 @@
     text-align: center;
 }
 
-.image-container:hover .overlay-teamsection {
+.image-wrapper:hover .vehicle-overlay {
     opacity: 1;
 }
 
-.rating {
+.vehicle-rating {
     font-size: 1.9vw;
     margin-bottom: 5px;
 }
 
-.description {
+.vehicle-description {
     font-size: 0.9vw;
     text-align: center;
     max-width: 80%;
 }
 
-.team-name {
-    font-size: 1.2vw;
-    font-weight: bold;
-    color: #4d5061;
-    margin: 0;
-    margin-top: 20px;
-}
-
-.team-cargo {
+.vehicle-label {
     padding-top: 1vw;
     font-size: 1.1vw;
     font-weight: bold;
@@ -109,22 +101,42 @@
     margin: 5px 0 0 0;
 }
 
-.dot {
-    width: 12px;
-    height: 12px;
-    border: 2px solid #222c55;
-    border-radius: 50%;
-    background-color: transparent;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.vehicle-card {
+    flex: 0 0 33.3333%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.3;
+    transform: scale(0.8) translateY(-20px);
+    transition: all 0.7s ease-in-out;
+    z-index: 0;
+    pointer-events: none;
 }
 
-.dot.active {
-    background-color: #222c55;
+.vehicle-card.current {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    z-index: 3;
+    pointer-events: auto;
+}
+
+.vehicle-card.previous,
+.vehicle-card.next {
+    opacity: 0.5;
+    transform: scale(0.85) translateY(-10px);
+    z-index: 1;
+}
+
+.vehicle-card.hidden {
+    opacity: 0;
+    transform: scale(0.7) translateY(-30px);
+    z-index: 0;
+    pointer-events: none;
 }
 
 @media (max-width: 768px) {
-    .team-card {
+    .vehicle-card {
         flex: 0 0 100%;
     }
 }
