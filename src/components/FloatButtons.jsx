@@ -2,13 +2,12 @@ import React from "react";
 import "../styles/FloatButtons.css";
 import { FaInstagram, FaWhatsapp, FaFacebook } from "react-icons/fa";
 
-const whatsappNumber = "+14323482322";
 
 export default function FloatButtons() {
     return (
         <div className="float-buttons">
             <a
-                href={`https://wa.me/${whatsappNumber}`}
+                href={`https://wa.link/zibtwi`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="float-button whatsapp"
@@ -17,7 +16,7 @@ export default function FloatButtons() {
                 <FaWhatsapp />
             </a>
             <a
-                href="https://www.instagram.com/"
+                href="https://www.instagram.com/cea_jck?igsh=OTk2MTA0MzdwbTVk"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="float-button instagram"

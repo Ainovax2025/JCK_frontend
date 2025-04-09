@@ -15,7 +15,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 15px 0;
+    padding: 1vw 15vw;
     overflow: hidden;
 }
 
@@ -138,5 +138,25 @@
 @media (max-width: 768px) {
     .vehicle-card {
         flex: 0 0 100%;
+        opacity: 1 !important;
+        transform: scale(1) translateY(0) !important;
+        z-index: 1;
+        pointer-events: auto;
+        }
+    
+        .vehicle-card.hidden {
+        display: none;
+        }
+    
+        .vehicle-label {
+        font-size: 4vw;
+        }
+    
+        .vehicle-description {
+        font-size: 3vw;
+        }
+    
+        .vehicle-rating {
+        font-size: 5vw;
+        }
     }
-}
