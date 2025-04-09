@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "../styles/TeamSection.css";
 
+import member0 from "../assets/TeamWork/Classic gradient 02 (01).png";
 import member1 from "../assets/TeamWork/Classic gradient 02 (1).png";
 import member2 from "../assets/TeamWork/Classic gradient 02 (2).png";
 import member3 from "../assets/TeamWork/Classic gradient 02 (4).png";
@@ -12,76 +13,77 @@ import member7 from "../assets/TeamWork/Classic gradient 02 (12).png";
 const teamMembers = [
   {
     id: 1,
+    name: "Karina Salas",
+    cargo: "Directora de contabilidad",
+    image: member0,
+    rating: 5,
+    description: "Supervisa y garantiza la correcta gestión financiera y contable de la empresa."
+  },
+  {
+    id: 2,
     name: "J. Jairo Moreno",
-    cargo: "Por designar",
+    cargo: "Instructor en formación vial",
     image: member1,
     rating: 5,
     description: "Instructor con 10 años de experiencia en formación vial.",
   },
   {
-    id: 2,
+    id: 3,
     name: "Ana Milena Barragán",
-    cargo: "Por designar",
+    cargo: "Instructora en formación vial",
     image: member2,
     rating: 5,
     description: "Instructor con 10 años de experiencia en formación vial.",
   },
   {
-    id: 3,
+    id: 4,
     name: "Diego Moreno",
-    cargo: "Por designar",
+    cargo: "Instructor en formación vial",
     image: member3,
     rating: 5,
     description: "Instructor con 10 años de experiencia en formación vial.",
   },
   {
-    id: 4,
+    id: 5,
     name: "Yeison Medina",
-    cargo: "Por designar",
+    cargo: "Instructor en formación vial",
     image: member4,
     rating: 5,
     description: "Instructor con 10 años de experiencia en formación vial.",
   },
   {
-    id: 5,
+    id: 6,
     name: "H. Fabio Vanegas",
-    cargo: "Por designar",
+    cargo: "Instructor en formación vial",
     image: member5,
     rating: 5,
     description: "Instructor con 10 años de experiencia en formación vial.",
   },
   {
-    id: 6,
-    name: "Claudia Cuellar",
-    cargo: "Por designar",
-    image: member6,
-    rating: 5,
-    description: "Instructor con 10 años de experiencia en formación vial.",
-  },
-  {
     id: 7,
-    name: "Dennys Estrada",
-    cargo: "Por designar",
-    image: member7,
+    name: "Claudia Cuellar",
+    cargo: "Instructora en formación vial",
+    image: member6,
     rating: 5,
     description: "Instructor con 10 años de experiencia en formación vial.",
   },
   {
     id: 8,
-    name: "Karina Salas",
-    cargo: "Directora de contabilidad",
-    image: member6,
-    rating: 5,
-    description: "Instructora de conducción para personas con discapacidad.",
-  },
-  {
-    id: 9,
-    name: "Jhoan Camacho",
-    cargo: "Representante Legal",
+    name: "Dennys Estrada",
+    cargo: "Instructora en formación vial",
     image: member7,
     rating: 5,
-    description: "Docente en normativas de tránsito internacional.",
+    description: "Instructor con 10 años de experiencia en formación vial.",
   },
+  
+  // {
+  //   id: 9,
+  //   name: "Jhoan Camacho",
+  //   cargo: "Representante Legal",
+  //   image: member7,
+  //   rating: 5,
+  //   description: "Docente en normativas de tránsito internacional.",
+  // },
 ];
 
 const visibleCount = 3; // Número de miembros visibles en la sección

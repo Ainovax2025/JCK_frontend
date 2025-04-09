@@ -2,8 +2,10 @@
 
 
 .ContainerSectionBienvenida{
+    backdrop-filter: blur(10px);
     background: #E5E5E5;
-    padding: 4vw;
+    background-image: url("../assets/wallpapers/beige-paper.png"); /* O "../assets/background.jpg" si está en src */
+    padding: 5vw;
 }
 .SectionBienvenida{
     height: 50vh;
@@ -68,7 +70,6 @@
 .bg-home {
     margin-top: 0px; /* Ajusta según la altura de tu navbar */
     padding: 20px;
-    background-image: url("../assets/wallpapers/green.jfif"); /* O "../assets/background.jpg" si está en src */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
