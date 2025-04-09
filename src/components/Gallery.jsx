@@ -42,7 +42,7 @@ export default function VehicleCarousel() {
 
     return (
         <section className="vehicle-section">
-            <h2 className="vehicle-title">NUESTROS VEHICULOS</h2>
+            <h2 className="vehicle-title">Nuestros vehiculos</h2>
             <div className="carousel-wrapper">
                 <div className="carousel-inner"
                     style={{

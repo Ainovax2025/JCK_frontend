@@ -19,7 +19,7 @@ const services = [
 export default function ServicesSection() {
     return (
         <div className="services-section">
-            <h2 className="services-title">NUESTROS SERVICIOS</h2>
+            <h2 className="services-title">Nuestros servicios</h2>
             <div className="services-container">
                 {services.map((service) => (
                     <div key={service.id} className="service-card" style={{ backgroundColor: "#D2D4D4" }}>

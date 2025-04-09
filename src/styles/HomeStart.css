@@ -1,13 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 
-.ContainerSectionBienvenida{
+.ContainerSectionBienvenida {
     backdrop-filter: blur(10px);
-    background: #E5E5E5;
-    background-image: url("../assets/wallpapers/beige-paper.png"); /* O "../assets/background.jpg" si está en src */
-    padding: 5vw;
+
 }
-.SectionBienvenida{
+
+.video-background-section {
+    position: relative;
+    width: 100%;
+    height: 70vb;
+    /* o la altura que quieras */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    /* color del texto por encima */
+}
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 0;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.596);
+    /* cambia la opacidad y color aquí */
+    z-index: 1;
+}
+
+.video-content {
+    position: relative;
+    z-index: 2;
+}
+
+.video-content h1 {
+    font-size: 3vw;
+    margin: 0;
+}
+
+.video-content p {
+    font-size: 1.5vw;
+}
+
+
+.SectionBienvenida {
     height: 50vh;
     display: flex;
     justify-content: center;
@@ -15,11 +64,13 @@
     gap: 25px;
     padding: 10px;
 }
-.ContenedorBienvenidaIzquierda, .ContenedorBienvenidaDerecha{
-    width: 50%;
+
+.ContenedorBienvenidaIzquierda,
+.ContenedorBienvenidaDerecha {
+    width: 70vw;
 }
 
-.ContenedorBienvenidaDerecha{
+.ContenedorBienvenidaDerecha {
     background-color: #6c6c64;
     height: 100%;
     border-radius: 15px;
@@ -31,25 +82,30 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.ContainerTextBienvenida{
-    padding: 45px 106px;
-    color: #222c55;
+.ContainerTextBienvenida {
+    padding: 1vw 3vw;
+    color: #ffffff;
 }
 
-.ContainerTextBienvenida h1{
-    font-size: 3vw;
+.ContainerTextBienvenida h1 {
+    text-align: center;
+    font-size: 4vw;
+    padding: 0vw 0vw 1vw 2vw;
     margin: 0px;
     margin-bottom: 39px;
 }
-.ContainerTextBienvenida h4{
+
+.ContainerTextBienvenida h4 {
+    text-align: center;
     font-size: 1.2vw;
+    padding: 0vw 0vw 1vw 2vw;
     margin: 0px;
 }
 
-.ContainerBtns{
+.ContainerBtns {
     padding: 0px 106px;
     display: flex;
-    gap:20px;
+    gap: 20px;
 }
 
 .ContainerBtns button:nth-child(1) {
@@ -67,8 +123,10 @@
     border: none;
     border-radius: 7px;
 }
+
 .bg-home {
-    margin-top: 0px; /* Ajusta según la altura de tu navbar */
+    margin-top: 0px;
+    /* Ajusta según la altura de tu navbar */
     padding: 20px;
     background-size: cover;
     background-position: center;
@@ -83,29 +141,41 @@
 }
 
 .transparent-box {
-    position: static; /* O prueba con fixed */
-    top: 0px; /* Baja el cuadro */
-    left: 2%; /* Lo mueve a la derecha */
-    transform: none; /* Elimina transform si causa problemas */
-    gap: 40px; /* Espacio entre la imagen y el texto */
+    position: static;
+    /* O prueba con fixed */
+    top: 0px;
+    /* Baja el cuadro */
+    left: 2%;
+    /* Lo mueve a la derecha */
+    transform: none;
+    /* Elimina transform si causa problemas */
+    gap: 40px;
+    /* Espacio entre la imagen y el texto */
     align-items: center;
-    background-color: rgba(155, 163, 173, 0.5); /* Color gris oscuro con 50% de transparencia */
-    border-radius: 12px; /* Bordes redondeados */
-    padding: 16px; /* Espaciado interno */
-    color: rgb(33, 30, 30); /* Texto en blanco */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    transform: translate(0px, 20px); /* Mueve el cuadro */
+    background-color: rgba(155, 163, 173, 0.5);
+    /* Color gris oscuro con 50% de transparencia */
+    border-radius: 12px;
+    /* Bordes redondeados */
+    padding: 16px;
+    /* Espaciado interno */
+    color: rgb(33, 30, 30);
+    /* Texto en blanco */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    /* Sombra suave */
+    transform: translate(0px, 20px);
+    /* Mueve el cuadro */
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: auto 1fr; /* Imagen y textos en columnas */
+    grid-template-columns: auto 1fr;
+    /* Imagen y textos en columnas */
     gap: 50px;
     align-items: center;
     padding-bottom: 10vh;
 }
 
-.image-div{
+.image-div {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -114,16 +184,17 @@
 
 .text-content {
     display: flex;
-    flex-direction: column; /* Apila los <p> verticalmente */
+    flex-direction: column;
+    /* Apila los <p> verticalmente */
 }
-    
+
 .subtitles {
-        text-align: left;
-        color: #424631;
-        padding: 4rem 2rem;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 5vb;
-    }
+    text-align: left;
+    color: #424631;
+    padding: 4rem 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 5vb;
+}
 
 .btn {
     display: flex;

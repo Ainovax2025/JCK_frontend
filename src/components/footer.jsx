@@ -1,10 +1,9 @@
 import React from "react";
 import {
-  FaFacebook,
-  FaTwitter,
   FaInstagram,
   FaPhone,
   FaEnvelope,
+  FaTiktok,
 } from "react-icons/fa";
 import "../styles/footer.css";
 
@@ -38,19 +37,18 @@ const Footer = () => {
         <div className="footer-section">
           <h4>Contact Info</h4>
           <p>
-            <FaPhone /> +1 234 567 890
+            <FaPhone /> +1 (432) 348-2322
           </p>
           <p>
-            <FaEnvelope /> info@realestate.com
+            <FaEnvelope /> cea.universaljck@gmail.com
           </p>
         </div>
 
         <div className="footer-section social">
           <h4>Follow Us</h4>
           <div className="social-icons">
-            <FaFacebook />
-            <FaTwitter />
             <FaInstagram />
+            <FaTiktok />
           </div>
         </div>
       </div>

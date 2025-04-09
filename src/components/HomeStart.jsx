@@ -1,28 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "../styles/HomeStart.css";
 import { motion } from "framer-motion";
 
-// Importa tus imágenes desde assets
-import Img1 from "../assets/Rotation/Logo.png";
-import Img2 from "../assets/Rotation/TeamWork.jpg";
-import Img3 from "../assets/Rotation/TeamWork1.jpg";
-import Img4 from "../assets/Rotation/Coche1.jpg";
-
-const images = [Img1, Img2, Img3, Img4];
+import Film from "../assets/wallpapers/found3.mp4"
 
 export default function Home() {
-  const [currentImage, setCurrentImage] = useState(0);
-  const [prevImage, setPrevImage] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setPrevImage(currentImage);
-      setCurrentImage((prev) => (prev + 1) % images.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [currentImage]);
-
-
   return (
     <div>
       <motion.div
@@ -32,52 +14,35 @@ export default function Home() {
         transition={{ duration: 1 }}
       >
         <section className="ContainerSectionBienvenida">
-          <div className="SectionBienvenida">
-            <div className="ContenedorBienvenidaIzquierda">
-              <div className="ContainerTextBienvenida">
-                <h1>Aprende a conducir con expertos certificados</h1>
-                <h4>
-                  Más de 10 años formando conductores seguros y responsables
-                </h4>
-              </div>
-              <div className="ContainerBtns">
-                <button>Comenzar ahora</button>
-                <button>Ver cursos</button>
-              </div>
-            </div>
+          <section className="video-background-section">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="background-video"
+          >
+            <source src={Film} type="video/mp4" />
+            Tu navegador no soporta videos HTML5.
+          </video>
 
-            {/* Carrusel de imágenes */}
-            <div className="ContenedorBienvenidaDerecha">
-              <div className="carousel">
-                {/* Imagen estática de fondo */}
-                <img
-                  src={images[prevImage]}
-                  alt={`Previous Slide`}
-                  className="carousel-bg"
-                />
-                {/* Imagen que se desliza encima */}
-                <motion.img
-                  key={currentImage}
-                  src={images[currentImage]}
-                  alt={`Slide ${currentImage}`}
-                  className="carousel-foreground"
-                  initial={{ x: 300, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ duration: 0.8 }}
-                />
-                {/* Puntos de navegación */}
-                <div className="carousel-dots">
-                  {images.map((_, index) => (
-                    <div
-                      key={index}
-                      className={`dot ${index === currentImage ? "active" : ""}`}
-                      onClick={() => setCurrentImage(index)}
-                    ></div>
-                  ))}
+          {/* Overlay de opacidad */}
+          <div className="video-overlay" />
+
+          {/* Contenido por encima del video */}
+          <div className="video-content">
+            <div className="SectionBienvenida">
+                <div className="ContenedorBienvenidaIzquierda">
+                  <div className="ContainerTextBienvenida">
+                    <h1>Aprende a conducir con expertos certificados</h1>
+                    <h4>
+                      Más de 10 años formando conductores seguros y responsables
+                    </h4>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
         </section>
       </motion.div>
     </div>

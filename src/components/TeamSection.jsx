@@ -127,7 +127,7 @@ export default function TeamSection() {
 
   return (
     <section className="team-section">
-      <h2 className="team-title">NUESTRO EQUIPO</h2>
+      <h2 className="team-title">Nuestro equipo</h2>
       <div className="carousel-container">
         <div
           className="carousel-track"

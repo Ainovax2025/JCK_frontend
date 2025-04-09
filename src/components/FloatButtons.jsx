@@ -1,13 +1,13 @@
 import React from "react";
 import "../styles/FloatButtons.css";
-import { FaInstagram, FaWhatsapp, FaFacebook } from "react-icons/fa";
+import { FaInstagram, FaWhatsapp, FaTiktok } from "react-icons/fa";
 
 
 export default function FloatButtons() {
     return (
         <div className="float-buttons">
             <a
-                href={`https://wa.link/zibtwi`}
+                href="https://wa.link/zibtwi"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="float-button whatsapp"
@@ -25,13 +25,13 @@ export default function FloatButtons() {
                 <FaInstagram />
             </a>
             <a
-                href="https://www.facebook.com/jhon.delgado.712"
+                href="https://www.tiktok.com/@universaljck?_t=ZS-8vNeuIO4DiC&_r=1"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="float-button facebook"
-                aria-label="Facebook"
+                className="float-button tiktok"
+                aria-label="Tiktok"
             >
-                <FaFacebook />
+                <FaTiktok />
             </a>
         </div>
     );
