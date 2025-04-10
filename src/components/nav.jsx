@@ -9,11 +9,11 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-left">
-        <Link to="/" className="logo">
+        <Link to="/Universal_JCK" className="logo">
           <PiBuildingApartmentFill
             style={{ color: "white", fontSize: "30px" }}
           />
-          <span className="logo-text">JCK</span>
+          <span className="logo-text">Universal JCK</span>
         </Link>
       </div>
 
