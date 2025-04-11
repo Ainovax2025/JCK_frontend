@@ -21,7 +21,7 @@ const Paginador = ({ totalDePaginas = 1, onPageChange }) => {
         onClick={() => cambiarPagina(paginaActual - 1)} 
         disabled={paginaActual === 1}
       >
-       <FaAngleLeft/>
+      <FaAngleLeft/>
       </button>
 
       {[...Array(totalPaginas)].map((_, index) => {

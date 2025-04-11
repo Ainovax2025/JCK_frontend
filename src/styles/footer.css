@@ -17,6 +17,7 @@
   .footer-section {
     flex: 1;
     min-width: 180px;
+    margin-right: 0.5vw;
   }
   
   .footer-section h4 {

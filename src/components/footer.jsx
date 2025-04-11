@@ -12,30 +12,29 @@ const Footer = () => {
     <footer className="footer">
       <div className="containerFooter">
         <div className="footer-section about">
-          <h4>About Us</h4>
+          <h4>Sobre nosotros</h4>
           <p>
-            Leading real estate agency with the best properties for sale and
-            rent.
+            Escuela de conducción líder con las mejores clases y vehículos para aprender a conducir.
           </p>
         </div>
 
         <div className="footer-section">
-          <h4>Quick Links</h4>
+          <h4>Enlaces Rápidos</h4>
           <ul>
             <li>
-              <span>Properties</span>
+              <span>Cursos</span>
             </li>
             <li>
-              <span>Services</span>
+              <span>Servicios</span>
             </li>
             <li>
-              <span>Contact</span>
+              <span>Contacto</span>
             </li>
           </ul>
         </div>
 
         <div className="footer-section">
-          <h4>Contact Info</h4>
+          <h4>Información de contacto</h4>
           <p>
             <FaPhone /> +1 (432) 348-2322
           </p>
@@ -45,7 +44,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-section social">
-          <h4>Follow Us</h4>
+          <h4>Siguenos en</h4>
           <div className="social-icons">
             <FaInstagram />
             <FaTiktok />
@@ -53,7 +52,7 @@ const Footer = () => {
         </div>
       </div>
       <hr />
-      <p className="copyright">© 2025 RealEstate Pro. All rights reserved.</p>
+      <p className="copyright">© 2025 RealEstate Pro. Todos los derechos reservados.</p>
     </footer>
   );
 };

@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 // import { FaHome, FaBullhorn } from "react-icons/fa";
-import { PiBuildingApartmentFill } from "react-icons/pi";
-
+import {IoCarSportSharp} from "react-icons/io5";
 import "../styles/navbar.css";
 
 function Navbar() {
@@ -10,10 +9,10 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-left">
         <Link to="/" className="logo">
-          <PiBuildingApartmentFill
+          <IoCarSportSharp  
             style={{ color: "white", fontSize: "30px" }}
           />
-          <span className="logo-text">JCK</span>
+          <span className="logo-text">Universal JCK</span>
         </Link>
       </div>
 
