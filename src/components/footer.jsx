@@ -36,7 +36,7 @@ const Footer = () => {
         <div className="footer-section">
           <h4>Información de contacto</h4>
           <p>
-            <FaPhone /> +1 (432) 348-2322
+            <FaPhone /> +57 (312) 401-0087
           </p>
           <p>
             <FaEnvelope /> cea.universaljck@gmail.com
