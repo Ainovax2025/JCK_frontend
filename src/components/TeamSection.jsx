@@ -14,7 +14,7 @@ const teamMembers = [
   {
     id: 1,
     name: "Karina Salas",
-    cargo: "Directora de contabilidad",
+    cargo: "Directora Ejecutiva",
     image: member0,
     rating: 5,
     description: "Supervisa y garantiza la correcta gestión financiera y contable de la empresa."

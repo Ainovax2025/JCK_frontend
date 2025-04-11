@@ -26,9 +26,9 @@ export default function Section() {
           }
         }, 30);
       };
-      animateNumber(setInstructores, 50);
+      animateNumber(setInstructores, 10);
       animateNumber(setAnos, 10);
-      animateNumber(setFormados, 5000);
+      animateNumber(setFormados, 9300);
     }
   }, [inView]);
 
