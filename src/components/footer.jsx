@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  FaInstagram,
-  FaPhone,
-  FaEnvelope,
-  FaTiktok,
-} from "react-icons/fa";
+import { FaInstagram, FaPhone, FaEnvelope, FaTiktok } from "react-icons/fa";
 import "../styles/footer.css";
 
 const Footer = () => {
@@ -14,7 +9,8 @@ const Footer = () => {
         <div className="footer-section about">
           <h4>Sobre nosotros</h4>
           <p>
-            Escuela de conducción líder con las mejores clases y vehículos para aprender a conducir.
+            Escuela de conducción líder con las mejores clases y vehículos para
+            aprender a conducir.
           </p>
         </div>
 
@@ -52,7 +48,10 @@ const Footer = () => {
         </div>
       </div>
       <hr />
-      <p className="copyright">© 2025 RealEstate Pro. Todos los derechos reservados.</p>
+      {/* <p className="copyright">© 2025 Ainovax. Todos los derechos reservados.</p> */}
+      <a className="copyright" href="https://ainovax.netlify.app/">
+        © 2025 Ainovax. Todos los derechos reservados.
+      </a>
     </footer>
   );
 };
