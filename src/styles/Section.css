@@ -1,22 +1,46 @@
-.stat-icon {
-  font-size: 2.5rem;
-  color: white;
+/* Animación de entrada */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
+/* Contenedor principal */
 .stats-container {
   display: flex;
   justify-content: center;
   width: 100%;
   max-width: 100%;
   background-color: #222c55; /* Azul marino oscuro */
+  flex-wrap: wrap;
+  padding: 40px 0;
+  gap: 20px;
 }
 
 /* Tarjetas de estadísticas */
 .stat-card {
   border-radius: 12px;
-  padding: 10vh;
+  padding: 6vh 2vw;
   width: 280px;
   text-align: center;
+  background-color: transparent;
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+.stat-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.stat-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.stat-card:nth-child(3) {
+  animation-delay: 0.6s;
 }
 
 .stat-card:hover {
@@ -26,16 +50,44 @@
   align-items: center;
 }
 
-/* Estilos de números y etiquetas */
+/* Iconos */
+.stat-icon {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+/* Número destacado */
 .stat-number {
   font-size: 3.5rem;
   font-weight: bold;
-  color: white; 
-  margin:0px;
+  color: white;
+  margin: 0px;
 }
 
+/* Texto descriptivo */
 .stat-label {
   font-size: 1.2rem;
   margin-top: 10px;
   color: #ccd6f6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .stat-card {
+    width: 90%;
+    padding: 40px 20px;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  .stat-label {
+    font-size: 1rem;
+  }
+
+  .stat-icon {
+    font-size: 2rem;
+  }
 }

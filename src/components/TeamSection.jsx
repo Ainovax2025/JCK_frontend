@@ -75,26 +75,38 @@ const teamMembers = [
     rating: 5,
     description: "Instructor con 10 años de experiencia en formación vial.",
   },
-  
-  // {
-  //   id: 9,
-  //   name: "Jhoan Camacho",
-  //   cargo: "Representante Legal",
-  //   image: member7,
-  //   rating: 5,
-  //   description: "Docente en normativas de tránsito internacional.",
-  // },
 ];
 
-const visibleCount = 3; // Número de miembros visibles en la sección
-
-export default function TeamSection() {
-  const totalSlides = Math.ceil(teamMembers.length - 2);
+const TeamSection = () => {
+  const [visibleCount, setVisibleCount] = useState(3); // Número de miembros visibles
   const [slideIndex, setSlideIndex] = useState(0);
   const [animate, setAnimate] = useState(true);
+  const [fadeOut, setFadeOut] = useState(false); // Nuevo estado para el desvanecimiento
+
+  // Calcular visibleCount basado en el ancho de la ventana
+  useEffect(() => {
+    const updateVisibleCount = () => {
+      const width = window.innerWidth;
+      if (width <= 768) {
+        setVisibleCount(1); // Para teléfonos móviles, mostrar 1 miembro
+      } else if (width <= 1000) {
+        setVisibleCount(2); // Para tabletas, mostrar 2 miembros
+      } else {
+        setVisibleCount(3); // Para pantallas grandes, mostrar 3 miembros
+      }
+    };
+
+    updateVisibleCount(); // Inicializar el valor de visibleCount
+    window.addEventListener("resize", updateVisibleCount); // Actualizar cuando cambie el tamaño de la ventana
+
+    return () => window.removeEventListener("resize", updateVisibleCount); // Limpiar el listener
+  }, []);
+  
+  const totalSlides = teamMembers.length - visibleCount + 1;
 
   const handleDotClick = (index) => {
     setAnimate(true);
+    setFadeOut(false); // Al hacer clic en los puntos, no desvanecer
     setSlideIndex(index);
   };
 
@@ -102,26 +114,25 @@ export default function TeamSection() {
     const goToNextSlide = () => {
       if (slideIndex < totalSlides - 1) {
         setAnimate(true);
+        setFadeOut(false); // Restablecer el estado de desvanecimiento
         setSlideIndex((prev) => prev + 1);
       } else {
-        setAnimate(true);
-        setSlideIndex(totalSlides);
+        // Activar el desvanecimiento
+        setFadeOut(true);
         setTimeout(() => {
           setAnimate(false);
-          setSlideIndex(0);
-        }, 700);
+          setSlideIndex(0); // Reiniciar al primer slide
+          setFadeOut(false); // Desactivar el desvanecimiento
+        }, 300); // Duración del desvanecimiento
       }
     };
+
     const interval = setInterval(goToNextSlide, 5000);
     return () => clearInterval(interval);
   }, [slideIndex, totalSlides]);
 
   const getTransform = () => {
     let percentage = (100 / visibleCount) * slideIndex;
-    if (percentage > 0) {
-      percentage = 33 * slideIndex;
-    }
-    console.log(percentage);
     return `translateX(-${percentage}%)`;
   };
 
@@ -135,6 +146,9 @@ export default function TeamSection() {
             width: `${(teamMembers.length * 100) / visibleCount}%`,
             transform: getTransform(),
             transition: animate ? "transform 0.7s ease-in-out" : "none",
+            opacity: fadeOut ? 0 : 1, // Control de opacidad para el desvanecimiento
+            transitionProperty: animate ? "transform, opacity" : "none",
+            transitionDuration: fadeOut ? "0.3s" : "0.7s", // Tiempo de desvanecimiento rápido
           }}
         >
           {teamMembers.map((member) => (
@@ -164,13 +178,13 @@ export default function TeamSection() {
         {Array.from({ length: totalSlides }).map((_, i) => (
           <div
             key={i}
-            className={`dot ${
-              i === slideIndex % totalSlides ? "active-colaboradores" : ""
-            }`}
+            className={`dot ${i === slideIndex % totalSlides ? "active-colaboradores" : ""}`}
             onClick={() => handleDotClick(i)}
           />
         ))}
       </div>
     </section>
   );
-}
+};
+
+export default TeamSection;

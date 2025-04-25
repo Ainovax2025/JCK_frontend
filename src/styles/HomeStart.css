@@ -102,28 +102,6 @@
     margin: 0px;
 }
 
-.ContainerBtns {
-    padding: 0px 106px;
-    display: flex;
-    gap: 20px;
-}
-
-.ContainerBtns button:nth-child(1) {
-    background: #222c55;
-    color: white;
-    padding: 19px;
-    border: none;
-    border-radius: 7px;
-}
-
-.ContainerBtns button:nth-child(2) {
-    background: white;
-    color: #222c55;
-    padding: 19px;
-    border: none;
-    border-radius: 7px;
-}
-
 .bg-home {
     margin-top: 0px;
     /* Ajusta según la altura de tu navbar */
@@ -175,13 +153,6 @@
     padding-bottom: 10vh;
 }
 
-.image-div {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 15px;
-}
-
 .text-content {
     display: flex;
     flex-direction: column;
@@ -196,74 +167,84 @@
     font-size: 5vb;
 }
 
-.btn {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    cursor: pointer;
-    padding: 9px 26px;
-    border-radius: 7px;
-    border: 2px solid #5d6244;
-    background: #5d6244;
-    color: white;
+/* Dispositivos medianos: Tablets (<= 768px) */
+@media (max-width: 768px) {
+    .SectionBienvenida {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .ContenedorBienvenidaIzquierda,
+    .ContenedorBienvenidaDerecha {
+        width: 90vw;
+    }
+
+    .ContainerTextBienvenida h1 {
+        font-size: 6vw;
+    }
+
+    .ContainerTextBienvenida h4 {
+        font-size: 3.5vw;
+    }
+
+    .ContainerBtns {
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ContainerBtns button {
+        width: 80%;
+    }
+
+    .video-content h1 {
+        font-size: 5vw;
+    }
+
+    .video-content p {
+        font-size: 3vw;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .subtitles {
+        font-size: 4.5vw;
+    }
 }
 
-/*CARRUSEL DE IMAGENES*/
-.carousel {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    border-radius: 15px;
-}
+/* Dispositivos pequeños: Teléfonos (<= 480px) */
+@media (max-width: 480px) {
+    .ContainerTextBienvenida h1 {
+        font-size: 7vw;
+    }
 
-.carousel-bg {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    opacity: 1;
-    border-radius: 15px;
-}
+    .ContainerTextBienvenida h4 {
+        font-size: 4vw;
+    }
 
-.carousel-foreground {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    border-radius: 15px;
-}
+    .video-content h1 {
+        font-size: 6vw;
+    }
 
-.carousel-dots {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-    z-index: 2;
-}
+    .video-content p {
+        font-size: 3.5vw;
+    }
 
-.carousel-dots .dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    border: 2px solid #222c55;
-    background-color: transparent;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
+    .ContainerBtns {
+        gap: 10px;
+    }
 
-.carousel-dots .dot:hover {
-    transform: scale(1.1);
-}
+    .carousel-dots .dot {
+        width: 10px;
+        height: 10px;
+    }
 
-.carousel-dots .dot.active {
-    background-color: #222c55;
+    .subtitles {
+        padding: 2rem 1rem;
+        font-size: 5.5vw;
+    }
 }
