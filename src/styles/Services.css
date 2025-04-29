@@ -88,14 +88,14 @@
 }
 
 /* Teléfonos y pantallas pequeñas (<= 480px) */
-@media (max-width: 480px) {
+@media (max-width: 500px) {
     .services-title {
         font-size: 1.5rem;
     }
 
     .services-container {
         width: 100%;
-        padding: 10px;
+        padding: 0px;
     }
 
     .service-card {

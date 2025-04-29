@@ -159,34 +159,38 @@
       padding: 2vw 3vw;
   }
 
+  .image-container {
+    width: 45vb;
+  }
+  
   .team-card {
       flex: 0 0 100%; /* 1 card per row */
       margin-bottom: 20px; /* Add spacing between cards */
   }
 
   .rating {
-      font-size: 2vw;
+      font-size: 4vb;
   }
 
   .description {
-      font-size: 1.2vw;
+      font-size: 2vb;
   }
 
   .team-name {
-      font-size: 2vw;
+      font-size: 3vw;
   }
 
   .team-cargo {
-      font-size: 1.8vw;
+      font-size: 3vw;
   }
 
   .dot {
-      width: 10px;
-      height: 10px;
+    width: 1.5vb;
+    height: 1.5vb;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   .team-title {
       font-size: 5vw;
   }
@@ -195,29 +199,33 @@
       padding: 3vw 4vw;
   }
 
+  .image-container {
+    width: 45vb;
+  }
+
   .team-card {
       flex: 0 0 100%; /* 1 card per row */
       margin-bottom: 20px;
   }
 
   .rating {
-      font-size: 2.5vw;
+      font-size: 3.5vb;
   }
 
   .description {
-      font-size: 1.5vw;
+      font-size: 2.5vb;
   }
 
   .team-name {
-      font-size: 2.5vw;
+      font-size: 2vb;
   }
 
   .team-cargo {
-      font-size: 2vw;
+      font-size: 2vb;
   }
 
   .dot {
-      width: 8px;
-      height: 8px;
+      width: 1vb;
+      height: 1vb;
   }
 }

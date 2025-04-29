@@ -137,7 +137,7 @@
 
 @media (max-width: 1000px) {
     .vehicle-title {
-        font-size:3vw;
+        font-size:4vw;
         }
     
     .image-wrapper {
@@ -154,17 +154,22 @@
 
 @media (max-width: 500px) {
     .vehicle-title {
-        font-size: 5vb;
+        font-size: 2.5vb;
         }
     
     .image-wrapper {
         overflow: hidden;
-        width: 240%;
+        width: 200%;
         margin: 0vb 0vb auto;
         aspect-ratio: 1 / 1;
         }
     
     .vehicle-label {
-        font-size: 1.8vb;
+        font-size: 1.6vb;
+        }
+
+    .vehicle-dot {
+        width: 1vb;
+        height: 1vb;
         }
     }
