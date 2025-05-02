@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "../styles/TeamSection.css";
 
+import member from "../assets/TeamWork/Classic gradient 02 (0).png";
 import member0 from "../assets/TeamWork/Classic gradient 02 (01).png";
 import member1 from "../assets/TeamWork/Classic gradient 02 (1).png";
 import member2 from "../assets/TeamWork/Classic gradient 02 (2).png";
@@ -11,6 +12,14 @@ import member6 from "../assets/TeamWork/Classic gradient 02 (10).png";
 import member7 from "../assets/TeamWork/Classic gradient 02 (12).png";
 
 const teamMembers = [
+  {
+    id: 0,
+    name: "Jhoan Camacho",
+    cargo: "Gerente Ejecutivo",
+    image: member,
+    rating: 5,
+    description: "Lidera la estrategia y gestión general de la escuela para garantizar su crecimiento y eficiencia."
+  },
   {
     id: 1,
     name: "Karina Salas",
