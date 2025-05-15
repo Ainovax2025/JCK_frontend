@@ -77,7 +77,7 @@ hr {
   text-align: center;
   font-size: 12px;
   color: #bdbdbd;
-    display: grid;
+  display: grid;
 }
 
 /* 🔽 Media query para pantallas menores a 1000px */

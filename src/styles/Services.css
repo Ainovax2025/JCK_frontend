@@ -7,6 +7,8 @@
     justify-content: center;
     text-align: center;
     padding: 40px 20px;
+    position: relative;
+    overflow: hidden;
 }
 
 /* Título "SERVICIOS" */
@@ -51,12 +53,21 @@
     width: 200px;
     height: 200px;
     margin-bottom: 10px;
+    object-fit: contain;
 }
 
-/* Título de tarjeta */
-.service-title {
+/* Nombre del servicio */
+.service-name {
     font-size: 1.2rem;
-    color: #ccd6f6;
+    color: #232234;
+    margin: 10px 0;
+}
+
+/* Descripción del servicio */
+.service-description {
+    font-size: 1rem;
+    color: #4a4a4a;
+    line-height: 1.4;
 }
 
 /* Tablets y pantallas medianas (<= 768px) */
@@ -81,45 +92,75 @@
         width: 150px;
         height: 150px;
     }
-
-    .service-title {
-        font-size: 1rem;
-    }
 }
 
-/* Teléfonos y pantallas pequeñas (<= 500px) */
 @media (max-width: 500px) {
+    .services-section {
+        padding: 20px 0;
+        overflow: hidden;
+        width: 100%;
+    }
+
     .services-container {
+        display:block;
+        width: 100%;
+        padding: 0px 0px 0px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .services-slider {
         display: flex;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-        width: 100vw;
-        padding: 0;
-        margin: 0;
+        transition: transform 0.3s ease;
     }
 
     .service-card {
-        min-width: 100vw;
-        flex: 0 0 100vw;
-        scroll-snap-align: center;
-        margin: 0;
-        box-sizing: border-box;
         padding: 20px;
+        box-sizing: border-box;
+        scroll-snap-align: start;
+        background: #a4aaaa7a;
+        height: auto;
     }
 
     .service-image {
-        width: 100%;
-        max-height: 250px;
+        width: 60%;
+        height: auto;
+        max-height: 180px;
         object-fit: contain;
     }
 
-    .services-section {
-        overflow-x: hidden;
+    .service-name {
+        font-size: 1.5rem;
+        margin: 15px 0;
     }
 
-    /* Quita barras de scroll si quieres */
-    .services-container::-webkit-scrollbar {
-        display: none;
+    .service-description {
+        font-size: 1rem;
+        padding: 0 15px;
+        margin-bottom: 20px;
+    }
+
+    .service-dots {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 20px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .service-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #D1D1D1;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: 1px solid #222c55;
+    }
+
+    .service-dot.active {
+        background-color: #222c55;
+        transform: scale(1.2);
     }
 }
