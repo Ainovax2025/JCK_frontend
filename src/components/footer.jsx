@@ -49,7 +49,7 @@ const Footer = () => {
       </div>
       <hr />
       {/* <p className="copyright">© 2025 Ainovax. Todos los derechos reservados.</p> */}
-      <a className="copyright" href="https://ainovax.netlify.app/">
+      <a className="copyright" href="https://ainovax.com.co">
         © 2025 Ainovax. Todos los derechos reservados.
       </a>
     </footer>
