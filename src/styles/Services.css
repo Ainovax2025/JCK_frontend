@@ -103,8 +103,8 @@
 
     .services-container {
         display:block;
-        width: 100%;
-        padding: 0px 0px 0px;
+        width: 95%;
+        padding: 0px 2px 0px;
         overflow: hidden;
         position: relative;
     }
